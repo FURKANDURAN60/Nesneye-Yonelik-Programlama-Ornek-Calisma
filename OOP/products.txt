@@ -1,0 +1,3 @@
+GPU,35999,10
+AMD Ryzen 7 7000 Series,39999,5
+MSI Toomahawk B450M MainBoard,15999,5
