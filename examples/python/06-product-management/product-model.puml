@@ -1,0 +1,23 @@
+@startuml
+title Urun Modeli
+
+class Product {
+  - name: str
+  - price: Decimal
+  - quantity: int
+  + total_price(): Decimal
+}
+
+class ProductRepository {
+  + from_csv(file_path: Path): list<Product>
+}
+
+class Inventory {
+  - products: list<Product>
+  + subtotal(): Decimal
+  + total_with_tax(tax_rate: Decimal): Decimal
+}
+
+ProductRepository ..> Product : olusturur
+Inventory o-- Product
+@enduml

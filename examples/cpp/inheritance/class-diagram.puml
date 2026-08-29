@@ -1,0 +1,35 @@
+@startuml
+title Arac Kalitim Hiyerarsisi
+
+class Vehicle {
+  - manufacturer_: string
+  - year_: int
+  - color_: string
+  + start(): void
+  + drive(): void
+  + stop(): void
+  + description(): string
+}
+
+class Car {
+  + drive(): void
+  + open_sunroof(): void
+}
+
+class Truck {
+  + drive(): void
+}
+
+class Bus {
+  + drive(): void
+}
+
+class SchoolBus {
+  + drive(): void
+}
+
+Vehicle <|-- Car
+Vehicle <|-- Truck
+Vehicle <|-- Bus
+Bus <|-- SchoolBus
+@enduml

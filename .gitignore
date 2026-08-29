@@ -1,32 +1,34 @@
-# Prerequisites
-*.d
+# Build directories
+/build/
+/cmake-build-*/
 
-# Compiled Object files
-*.slo
-*.lo
+# C/C++ build artifacts
+*.d
 *.o
 *.obj
-
-# Precompiled Headers
 *.gch
 *.pch
-
-# Compiled Dynamic libraries
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
 *.a
 *.lib
-
-# Executables
 *.exe
 *.out
 *.app
+*.ilk
+*.pdb
+
+# Python and Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+tempCodeRunnerFile.cpp
