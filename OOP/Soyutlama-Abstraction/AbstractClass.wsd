@@ -1,0 +1,49 @@
+@startuml ABS  CLASS
+
+title Shape Model
+
+abstract class Shape {
+    #x : int
+    #y : int
+    --
+    +getX() : int
+    +getY() : int
+    --
+    +setX(x : int) : void
+    +setY(y : int) : void
+    --
+    +Shape(x : int, y : int)
+    --
+    {abstract} +draw() : void
+}
+
+class Triangle {
+    +Triangle(x : int, y : int)
+    +draw() : void
+}
+
+class Rectangle {
+    +Rectangle(x : int, y : int)
+    +draw() : void
+}
+
+class Square {
+    +Square(x : int)
+    +draw() : void
+}
+
+Triangle -up-|> Shape : << inheritance >>
+Rectangle -up-|> Shape
+Square -up-|> Rectangle
+
+note right of Shape::draw
+Abstract
+end note
+
+note right of Triangle::draw
+Polymorphism
+end note
+
+hide empty members
+
+@enduml
