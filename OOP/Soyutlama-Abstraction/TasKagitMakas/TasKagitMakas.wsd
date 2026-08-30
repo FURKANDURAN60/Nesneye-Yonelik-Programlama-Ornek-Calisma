@@ -1,0 +1,42 @@
+@startuml Tas-Kagit-Makas Oyunu
+
+title Tas-Kagit-Makas Oyunu
+
+abstract class Player {
+    #name : string
+    #choice : string
+    #score : int
+    --
+    +Player(name : string)
+    +getName() : string
+    +getChoice() : string
+    +getScore() : int
+    +increaseScore() : void
+    --
+    {abstract} +makeChoice() : void
+}
+
+class HumanPlayer {
+    +HumanPlayer(name : string)
+    +makeChoice() : void
+}
+
+class RandomComputerPlayer {
+    +RandomComputerPlayer()
+    +makeChoice() : void
+}
+
+HumanPlayer -up-|> Player : << inheritance >>
+RandomComputerPlayer -up-|> Player
+
+note right of Player::makeChoice
+Abstract
+end note
+
+note right of HumanPlayer::makeChoice
+Polymorphism
+end note
+
+hide empty members
+
+@enduml
